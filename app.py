@@ -43,6 +43,8 @@ def upload_image():
         return redirect(request.url)
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
+        if os.path.isfile("./static/uploads/"+filename):
+            os.remove("./static/uploads/"+filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         #print('upload_image filename: ' + filename)
         flash('Image successfully uploaded and displayed below')
