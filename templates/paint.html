@@ -173,7 +173,17 @@
                     ctx.drawImage(base_image, 100, 100, 900, 500);
                 }
                 else {
-                    ctx.drawImage(base_image, 10, 100, 300, 400);
+                    canvas.style.marginTop = "50px"
+                    var x = canvas.width / 2;
+                    var y = canvas.height / 2;
+                    var width = base_image.width;
+                    var height = base_image.height;
+
+                    ctx.translate(x, y);
+                    ctx.rotate(90 * Math.PI / 180);
+                    ctx.drawImage(base_image, -width / 2, -height / 2, width, height);
+                    ctx.rotate(-90 * Math.PI / 180);
+                    ctx.translate(-x, -y);
                 }
             }
         }
