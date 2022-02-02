@@ -22,7 +22,7 @@ All you need is for the phone and computer to be connected to a common network.
         for eg, text: "ip address"
         This will create the qrcode which upon scanning will lead to the paint application.
         You can save the image of the qrcode generator for the future use.
-    (ii) In app.py file, at line 70, replace the value of host with your ip address. 
+    (ii) In app.py file, at line 88, replace the value of host with your ip address. 
          for eg, host = "ip address"
          This will run our paint application on the specified ip address.
          
